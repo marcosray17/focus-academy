@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --preto: #000;
+  --cinza: #1a1a1a;
+  --branco: #fff;
+  --texto: #bdbdbd;
+  --laranja: #ff5a0a;
+}
+
+body {
+  background-color: var(--preto);
+  color: var(--branco);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.cabecalho {
+  border-bottom: 1px solid #222;
+  padding: 20px ;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+}
+
+.logo span {
+  color: var(--laranja);
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: var(--texto);
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.menu a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--laranja);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transition: 0.3s;
+}
+
+.menu a:hover::after{
+  width: 100%;
+}
+
+
+.hero {
+  padding: 120px 0;
+}
+
+.text {
+  max-width: 600px;
+}
+
+.text h2 {
+  font-size: 5.5rem;
+  line-height: 1;
+  color: var(--laranja);
+  margin-bottom: 20px;
+}
+
+.text p {
+  color: var(--texto);
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: var(--laranja);
+  color: var(--branco);
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
+
+.servicos {
+  padding: 80px 0;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--cinza);
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.contato {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contato p {
+  color: var(--texto);
+  margin-bottom: 30px;
+}
+
+.rodape {
+  border-top: 1px solid #222;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.rodape p {
+  color: var(--texto);
+}
+
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text h2 {
+    font-size: 2.8rem;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+}
